@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Baloo+Bhai+2:wght@400..800&family=Fira+Code:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "AR One Sans";
+}
+.navbar {
+  /* font-size: 17px; */
+  box-shadow: 0 0 2px lightgray;
+  /* text-transform: uppercase; */
+}
+.active {
+  border-bottom: 2ps solid gray !important;
+}
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  background-color: white;
+  box-shadow: 0 0 3px lightgray;
+  padding: 25px;
+  /* border: 2px solid black; */
+  margin: 8px 0px;
+}
+.container-fluid {
+  min-height: 100vh;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.btn,
+.form-control {
+  /* border: 0px !important ; */
+  border-radius: 0px !important;
+}
