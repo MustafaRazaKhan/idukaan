@@ -5,6 +5,9 @@ import { useCart } from "../context/Cart";
 import axios from "axios";
 import { Prices } from "../components/Prices";
 import { toast } from "react-toastify";
+import Hero from "../components/Hero/Hero";
+import Featured from "../components/Featured/Featured";
+import Category from "../components/Category";
 
 const Home = () => {
   const [auth, setAuth] = useAuth();
@@ -83,131 +86,9 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-4">
-            <h4>Filter By Category</h4>
-            <div className="d-flex flex-column">
-              {categories?.map((c, i) => {
-                return (
-                  <>
-                    {c.name}{" "}
-                    <input
-                      type="checkbox"
-                      value={c.name}
-                      name="khan"
-                      id=""
-                      onChange={(e) => handleCheck(e.target.checked, c._id)}
-                    />
-                  </>
-                );
-              })}
-            </div>
-            <h4>Filter by Price</h4>
-            {Prices?.map((p) => {
-              return (
-                <div>
-                  <input
-                    type="radio"
-                    name="price"
-                    value={p.array}
-                    onChange={(e) => handleRadio(e)}
-                  />
-                  {p.name}
-                </div>
-              );
-            })}
-            <div className="col-md-4">
-              <button
-                className="btn btn-danger"
-                onClick={() => window.location.reload()}
-              >
-                Reset All
-              </button>
-            </div>
-
-            {/* </div>
-          <div className="d-flex flex-column">
-            <button
-              className="btn btn-danger"
-              onClick={() => window.location.reload()}
-            >
-            } */}
-          </div>
-          <div className="col-md-8">
-            {/* {JSON.stringify(radio)} */}
-            <h1>All Products</h1>
-            <div className="d-flex flex-wrap flex-column">
-              <h1> Products</h1>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "4px",
-                  flexWrap: "wrap",
-                }}
-              >
-                {products?.map((p) => {
-                  return (
-                    <>
-                      <div
-                        className="card p-2"
-                        style={{
-                          width: "15rem",
-                          height: "25rem",
-                          boxShadow: "0 0 3px black",
-                        }}
-                      >
-                        <img
-                          src={`http://localhost:8080/api/product-photo/${p._id}`}
-                          className=""
-                          alt="Product image"
-                          height="100px"
-                          style={{
-                            border: "2px solid black",
-                            padding: "2px",
-                          }}
-                        />
-                        <div className="card-body">
-                          <h5 className="card-title">{p.name}</h5>
-                          <p className="card-text">
-                            {p.description.substring(0, 20)}......
-                          </p>
-                          <p className="card-text">{p.price}</p>
-                          <div style={{ display: "flex", gap: "4px" }}>
-                            <div>
-                              {" "}
-                              <button
-                                className=" btn btn-danger"
-                                onClick={() => navigate(`/product/${p.slug}`)}
-                              >
-                                More Detail
-                              </button>
-                            </div>
-                            <div>
-                              {" "}
-                              <button
-                                className=" btn btn-secondary"
-                                onClick={() => {
-                                  setCart([...cart, p]);
-                                  localStorage.setItem(
-                                    "cart",
-                                    JSON.stringify([...cart, p])
-                                  );
-                                  toast.success("item add to cart");
-                                }}
-                              >
-                                Add To Cart
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
+        <Hero />
+        <Featured />
+        {/* <Category /> */}
       </div>
     </>
   );

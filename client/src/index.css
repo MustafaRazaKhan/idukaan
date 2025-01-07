@@ -4,15 +4,26 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "AR One Sans";
+  /* font-weight: 600; */
 }
-.navbar {
-  /* font-size: 17px; */
-  box-shadow: 0 0 2px lightgray;
-  /* text-transform: uppercase; */
+.container-fluid {
+  min-height: 100vh;
+  padding: 0px !important;
 }
-.active {
-  border-bottom: 2ps solid gray !important;
+.border-none {
+  border: 0px !important;
 }
+.bg-transparent {
+  background-color: transparent;
+}
+input:focus {
+  outline: none !important;
+  border: 0xp !important;
+}
+.icon-size {
+  font-size: 20px;
+}
+
 .register {
   display: flex;
   justify-content: center;
@@ -26,9 +37,13 @@ form {
   /* border: 2px solid black; */
   margin: 8px 0px;
 }
-.container-fluid {
-  min-height: 100vh;
+.catgory-container {
+  width: 100%;
 }
+.scroll {
+  overflow-x: scroll;
+}
+
 .center {
   justify-content: center;
   align-items: center;
@@ -38,3 +53,19 @@ form {
   /* border: 0px !important ; */
   border-radius: 0px !important;
 }
+.radius {
+  border-radius: 3px !important;
+}
+.bg {
+  background: linear-gradient(rgb(229, 214, 185), #d3d6d6);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  /* background-color: red; */
+}
+/* ::-webkit-scrollbar-thumb {
+  background: gray;
+}
+::-webkit-scrollbar-track {
+  background: green;
+} */

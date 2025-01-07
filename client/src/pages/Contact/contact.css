@@ -1,0 +1,138 @@
+/* General Styling */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.image-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.row .col-md-6 {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  transform: scale(1.02);
+}
+
+.text-primary {
+  color: #6a11cb !important;
+}
+
+.text-primary:hover {
+  color: #2575fc !important;
+  text-decoration: underline;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Contact Info Section Styling */
+.contact-info-section {
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.info-card i {
+  font-size: 36px;
+  color: #6a11cb;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.info-card p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .image-section {
+    padding: 0;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+}
